@@ -18,6 +18,20 @@ li {
   padding: .2em;
 }
 
+/* class="cols-n" means an element is n columns wide (12 cols = viewport width) */
+.cols-1  { width:   8.33%; }
+.cols-2  { width:  16.67%; }
+.cols-3  { width:  25.00%; }
+.cols-4  { width:  33.33%; }
+.cols-5  { width:  41.67%; }
+.cols-6  { width:  50.00%; }
+.cols-7  { width:  58.33%; }
+.cols-8  { width:  66.67%; }
+.cols-9  { width:  75.00%; }
+.cols-10 { width:  83.33%; }
+.cols-11 { width:  91.67%; }
+.cols-12 { width: 100.00%; }
+
 .menu-item {
   background-color: #b00b1e;
   color: white;
