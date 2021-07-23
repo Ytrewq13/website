@@ -1,21 +1,31 @@
+:root {
+    /* Color theme */
+    --color-bg:      #223322;
+    --color-bg-alt1: #b00b1e;
+    --color-bg-alt2: red;
+    --color-fg:      #b00b69; /* nice */
+    --color-fg-alt1: #cceecc;
+
+    /* Mobile width threshold (TODO: use this) */
+    --mobile-width-max: 768px;
+
+    /* Padding */
+    --padding-header: 10px;
+    --padding-header-mobile: 0px 5px 5px 5px;
+    --padding-header-menu: 0;
+    --padding-header-menu-item-box: .2em;
+    --padding-header-menu-item-link: 8px 12px;
+    --padding-content: 30px;
+}
+
 html {
-    background-color: #222222;
-    color: #b00b69;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
 }
 body {
     max-width: 960px;
     width: auto;
     margin: auto;
-}
-
-ul {
-  padding: 0;
-  margin-left: 5px;
-}
-
-li {
-  display: inline-block;
-  padding: .2em;
 }
 
 /* class="cols-n" means an element is n columns wide (12 cols = viewport width) */
@@ -32,33 +42,48 @@ li {
 .cols-11 { width:  91.67%; }
 .cols-12 { width: 100.00%; }
 
-.menu-item {
-  background-color: #b00b1e;
-  color: white;
-  padding: 8px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-a:hover, a:active {
-  background-color: red;
-}
-
 #top-bar {
     position: fixed;
     top: 0;
     width: inherit;
     max-width: inherit;
-    padding: 10px;
+    padding: var(--padding-header);
     margin: 15px;
-    border: 2px solid #b00b69;
-    background-color: #222222;
+    border: 2px solid var(--color-fg);
+    background-color: var(--color-bg);
     float: left;
+}
+#top-bar h1 { margin-top: 5px; margin-bottom: 10px; }
+
+#site-nav-menu {
+    padding: var(--padding-header-menu);
+    margin: 5px;
+    display: inline-block;
+}
+
+#site-nav-menu ul {
+    padding: 0;
+    margin: 0;
+}
+#site-nav-menu li {
+    display: inline-block;
+    padding: var(--padding-header-menu-item-box);
+}
+
+.menu-item {
+    background-color: var(--color-fg);
+    color: var(--color-fg-alt1);
+    padding: var(--padding-header-menu-item-link);
+    text-align: center;
+    text-decoration: none;
+}
+.menu-item:hover, .menu-item:active {
+    background-color: var(--color-bg-alt1);
 }
 
 #content {
     height: 3000px;
-    padding: 30px;
+    padding: var(--padding-content);
 }
 
 @media only screen and (max-width: 768px) {
@@ -66,8 +91,5 @@ a:hover, a:active {
     body {
         width: 100%;
     }
-    #top-bar {
-        padding: 5px;
-        padding-top: 0;
-    }
+    #top-bar { padding: var(--padding-header-mobile); }
 }
