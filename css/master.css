@@ -1,13 +1,10 @@
 :root {
     /* Color theme */
-    --color-bg:      #223322;
+    --color-bg:      #112211;
     --color-bg-alt1: #b00b1e;
     --color-bg-alt2: red;
     --color-fg:      #b00b69; /* nice */
     --color-fg-alt1: #cceecc;
-
-    /* Mobile width threshold (TODO: use this) */
-    --mobile-width-max: 768px;
 
     /* Padding */
     --padding-header: 10px;
@@ -45,8 +42,7 @@ body {
 #top-bar {
     position: fixed;
     top: 0;
-    width: inherit;
-    max-width: inherit;
+    /*max-width: inherit;*/
     padding: var(--padding-header);
     margin: 15px;
     border: 2px solid var(--color-fg);
@@ -70,12 +66,24 @@ body {
     padding: var(--padding-header-menu-item-box);
 }
 
-.menu-item {
+.menu a {
+    display: inline-block;
     background-color: var(--color-fg);
-    color: var(--color-fg-alt1);
-    padding: var(--padding-header-menu-item-link);
     text-align: center;
     text-decoration: none;
+}
+.menu a:hover {
+    background-color: var(--color-bg-alt1);
+}
+
+.menu-item {
+    max-width: inherit;
+    /*background-color: var(--color-fg);*/
+    color: var(--color-fg-alt1);
+    padding: var(--padding-header-menu-item-link);
+    /*text-align: center;
+    text-decoration: none;
+    display: inline-block;*/
 }
 .menu-item:hover, .menu-item:active {
     background-color: var(--color-bg-alt1);
