@@ -18,14 +18,16 @@
 html {
     background-color: var(--color-bg);
     color: var(--color-fg);
+    min-height: 100%
 }
 body {
-    max-width: 960px;
+    max-width: 1200px;
     width: auto;
     margin: auto;
+    /*height: 100%;*/
 }
 
-/* class="cols-n" means an element is n columns wide (12 cols = viewport width) */
+/* class="cols-n" means an element is n columns wide (12 cols = parent width) */
 .cols-1  { width:   8.33%; }
 .cols-2  { width:  16.67%; }
 .cols-3  { width:  25.00%; }
@@ -40,39 +42,32 @@ body {
 .cols-12 { width: 100.00%; }
 
 #top-bar {
-    position: fixed;
-    top: 0;
-    /*max-width: inherit;*/
+    position: sticky;
+    top: 15px;
     padding: var(--padding-header);
-    margin: 15px;
+    margin: 0 15px 30px 15px;
     border: 2px solid var(--color-fg);
     background-color: var(--color-bg);
     float: left;
+    text-align: center;
 }
 #top-bar h1 { margin-top: 5px; margin-bottom: 10px; }
 
 #site-nav-menu {
     padding: var(--padding-header-menu);
     margin: 5px;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-#site-nav-menu ul {
-    padding: 0;
-    margin: 0;
-}
-#site-nav-menu li {
-    display: inline-block;
-    padding: var(--padding-header-menu-item-box);
-}
-
-.menu a {
-    display: inline-block;
+#site-nav-menu a {
     background-color: var(--color-fg);
     text-align: center;
     text-decoration: none;
+    margin: 0 5px 0 5px;
 }
-.menu a:hover {
+#site-nav-menu a:hover {
     background-color: var(--color-bg-alt1);
 }
 
@@ -81,17 +76,14 @@ body {
     /*background-color: var(--color-fg);*/
     color: var(--color-fg-alt1);
     padding: var(--padding-header-menu-item-link);
-    /*text-align: center;
-    text-decoration: none;
-    display: inline-block;*/
 }
 .menu-item:hover, .menu-item:active {
     background-color: var(--color-bg-alt1);
 }
 
 #content {
-    height: 3000px;
     padding: var(--padding-content);
+    height: 3000px;
 }
 
 @media only screen and (max-width: 768px) {
