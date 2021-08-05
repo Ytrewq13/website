@@ -1,10 +1,8 @@
 :root {
     /* Color theme */
     --color-bg:      #112211;
-    --color-bg-alt1: #b00b1e;
-    --color-bg-alt2: red;
-    --color-fg:      #b00b69; /* nice */
-    --color-fg-alt1: #cceecc;
+    --color-bg-alt1: #b00b69; /* nice */
+    --color-fg:      #f77ec2;
 
     /* Padding */
     --padding-header: 10px;
@@ -74,7 +72,7 @@ body {
 .menu-item {
     max-width: inherit;
     /*background-color: var(--color-fg);*/
-    color: var(--color-fg-alt1);
+    color: var(--color-bg);
     padding: var(--padding-header-menu-item-link);
 }
 .menu-item:hover, .menu-item:active {
@@ -83,7 +81,6 @@ body {
 
 #content {
     padding: var(--padding-content);
-    height: 3000px;
 }
 
 @media only screen and (max-width: 768px) {
