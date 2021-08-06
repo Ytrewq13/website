@@ -1,8 +1,9 @@
 :root {
     /* Color theme */
-    --color-bg:      #112211;
-    --color-bg-alt1: #b00b69; /* nice */
-    --color-fg:      #f77ec2;
+    --color-bg:      #112211; /* Pthalo green */
+    --color-bg-alt1: #b00b69; /* Jazzberry jam */
+    --color-fg:      #f77ec2; /* Persian pink */
+    --color-fg-alt1: #F3923D; /* Cadmium orange */
 
     /* Padding */
     --padding-header: 10px;
@@ -23,6 +24,14 @@ body {
     width: auto;
     margin: auto;
     /*height: 100%;*/
+}
+
+a {
+    color: var(--color-fg-alt1);
+}
+
+li {
+    margin-bottom: 0.5em;
 }
 
 /* class="cols-n" means an element is n columns wide (12 cols = parent width) */
